@@ -1,0 +1,16 @@
+PODS:
+  - SLRGestureToolkitCore (0.1.0)
+
+DEPENDENCIES:
+  - SLRGestureToolkitCore (from `../`)
+
+EXTERNAL SOURCES:
+  SLRGestureToolkitCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SLRGestureToolkitCore: 6040e812aefd6f6c782c0e1f2e6f2bb3e327a968
+
+PODFILE CHECKSUM: 1d3994ba30758d3ea163544f7e6ec346050e95b0
+
+COCOAPODS: 1.14.3

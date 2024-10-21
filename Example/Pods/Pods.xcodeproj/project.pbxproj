@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09574116717F1B8CCDA61BA8B39F13E0 /* Pods-SLRGestureToolkitCore_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D34AFCCAA7AAB5F95C9B3284645415A4 /* Pods-SLRGestureToolkitCore_Tests-dummy.m */; };
+		212570C5C2B90FB4F827805DCB5D41C1 /* Pods-SLRGestureToolkitCore_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49454EE5BB06BCBEE31C6074FD638 /* Pods-SLRGestureToolkitCore_Example-dummy.m */; };
+		33D5A843B87886E6831FD36641B95796 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3DB651F1FA0B4C8A99234C0DE09BF256 /* SLRGestureToolkitCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DFA8FEC346535CD168BF05644CF7D11 /* SLRGestureToolkitCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F2FD94FE38DFE89EC9E166F6FE219F9 /* SLRGestureToolkitCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6233329C584B466AF51048AF19AB85 /* SLRGestureToolkitCore-dummy.m */; };
+		47E81627447D51ABED4B0B03827961C3 /* Pods-SLRGestureToolkitCore_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A56243E7D485FC544B908F65E41A03 /* Pods-SLRGestureToolkitCore_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D05CB2580E9EC14EF1CD21F99533CF60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		DCF62A13DE6F2F83DD4AE9B5FBD6B8D7 /* Pods-SLRGestureToolkitCore_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E4FE604FDDA73507200B6E67712B932 /* Pods-SLRGestureToolkitCore_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E29504ECCBB427F1E8D6C1315B22BAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F3DD11FE5E4B363DD0C1483E1BA772C1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EFAA56B0E3995104A3B533F37DB87 /* ReplaceMe.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DFB9B0B47771AF0FDE8E5277158941F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F641872B213A41DB35E2754DC14023BC;
+			remoteInfo = SLRGestureToolkitCore;
+		};
+		9083F9AF10E1E42560A18314026C278D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EA8EC17F3C48404B1D34C8BD921FA8D;
+			remoteInfo = "Pods-SLRGestureToolkitCore_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1010C66F86F229AF60CC503FB5595BEE /* SLRGestureToolkitCore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SLRGestureToolkitCore.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		12AC7C2C4325207EB74C906744A6D9F6 /* Pods-SLRGestureToolkitCore_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLRGestureToolkitCore_Tests.modulemap"; sourceTree = "<group>"; };
+		1A468925BD07240E441D19DCFA96DDE7 /* SLRGestureToolkitCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLRGestureToolkitCore.debug.xcconfig; sourceTree = "<group>"; };
+		212EE5F6C695E8BE6173F18ED71D3606 /* Pods-SLRGestureToolkitCore_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLRGestureToolkitCore_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2E3E5DFF68E802C59CFC13577B5497B3 /* SLRGestureToolkitCore-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SLRGestureToolkitCore-Info.plist"; sourceTree = "<group>"; };
+		2E4FE604FDDA73507200B6E67712B932 /* Pods-SLRGestureToolkitCore_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLRGestureToolkitCore_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3C5F8F7A3C5AD2869D23A034D1618683 /* SLRGestureToolkitCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLRGestureToolkitCore-prefix.pch"; sourceTree = "<group>"; };
+		3D6233329C584B466AF51048AF19AB85 /* SLRGestureToolkitCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SLRGestureToolkitCore-dummy.m"; sourceTree = "<group>"; };
+		4574EFD1DD36B755C00C76C8B1723B13 /* SLRGestureToolkitCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SLRGestureToolkitCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		486D54C4B8AD096FDEA9FA7B06971865 /* Pods_SLRGestureToolkitCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLRGestureToolkitCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DFA8FEC346535CD168BF05644CF7D11 /* SLRGestureToolkitCore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SLRGestureToolkitCore-umbrella.h"; sourceTree = "<group>"; };
+		4ED49454EE5BB06BCBEE31C6074FD638 /* Pods-SLRGestureToolkitCore_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLRGestureToolkitCore_Example-dummy.m"; sourceTree = "<group>"; };
+		574860A8DB172A8D874B54E270B09F92 /* Pods-SLRGestureToolkitCore_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLRGestureToolkitCore_Tests-Info.plist"; sourceTree = "<group>"; };
+		61CB979E332E4755603CBF74574F931A /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6EDCDB42CC78BE440E0DDD2B6C866E31 /* Pods-SLRGestureToolkitCore_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SLRGestureToolkitCore_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		710E4061322B6305B6F7F7BC2BA552C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		757A12B18FC8703D12340436E012E340 /* Pods-SLRGestureToolkitCore_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLRGestureToolkitCore_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7B8EFAA56B0E3995104A3B533F37DB87 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SLRGestureToolkitCore/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		834A44584225AB069CD8A252F8E003B6 /* Pods-SLRGestureToolkitCore_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLRGestureToolkitCore_Example-Info.plist"; sourceTree = "<group>"; };
+		8786E85DB1088507A9B2EDE90E75A145 /* Pods-SLRGestureToolkitCore_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SLRGestureToolkitCore_Example.modulemap"; sourceTree = "<group>"; };
+		8C2D5CDFB5F7AEA434B185D38D99C616 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLRGestureToolkitCore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8F2FDD2A1890346323C5D6F07BF9403E /* Pods-SLRGestureToolkitCore_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SLRGestureToolkitCore_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		92C58F7DB9EE176632BFCE9D36A38E66 /* SLRGestureToolkitCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SLRGestureToolkitCore.release.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A48BDE2247F701850EC07DB095DA92E4 /* Pods_SLRGestureToolkitCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLRGestureToolkitCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A56243E7D485FC544B908F65E41A03 /* Pods-SLRGestureToolkitCore_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SLRGestureToolkitCore_Example-umbrella.h"; sourceTree = "<group>"; };
+		CB8BC492CDC7C557DF642E7335CA3F3F /* Pods-SLRGestureToolkitCore_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SLRGestureToolkitCore_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D34AFCCAA7AAB5F95C9B3284645415A4 /* Pods-SLRGestureToolkitCore_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SLRGestureToolkitCore_Tests-dummy.m"; sourceTree = "<group>"; };
+		D425AC8D49601C05B5B7662CA6AE599F /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDD79AC51CED471944CBD2A9BB796BBF /* SLRGestureToolkitCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SLRGestureToolkitCore.modulemap; sourceTree = "<group>"; };
+		EB87085B5650CF901E543DED0AE8948A /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EF38003B2265A669E6AFA7671A4F1248 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02961FC2E6F2C22CC9DE55DE90320358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29504ECCBB427F1E8D6C1315B22BAC1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AFF59A990B22EF8242C55EE855C18F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05CB2580E9EC14EF1CD21F99533CF60 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62D6A10A17EA9BEEA5F7E2D9357B3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33D5A843B87886E6831FD36641B95796 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B9C64ADF27432A88A3CD23070295EEE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81A2A5E7373BF13D897507447C5D3D14 /* Pods-SLRGestureToolkitCore_Example */,
+				1FC9D28682C47C0580F36899A63F26E4 /* Pods-SLRGestureToolkitCore_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1FC9D28682C47C0580F36899A63F26E4 /* Pods-SLRGestureToolkitCore_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				12AC7C2C4325207EB74C906744A6D9F6 /* Pods-SLRGestureToolkitCore_Tests.modulemap */,
+				212EE5F6C695E8BE6173F18ED71D3606 /* Pods-SLRGestureToolkitCore_Tests-acknowledgements.markdown */,
+				8F2FDD2A1890346323C5D6F07BF9403E /* Pods-SLRGestureToolkitCore_Tests-acknowledgements.plist */,
+				D34AFCCAA7AAB5F95C9B3284645415A4 /* Pods-SLRGestureToolkitCore_Tests-dummy.m */,
+				574860A8DB172A8D874B54E270B09F92 /* Pods-SLRGestureToolkitCore_Tests-Info.plist */,
+				2E4FE604FDDA73507200B6E67712B932 /* Pods-SLRGestureToolkitCore_Tests-umbrella.h */,
+				D425AC8D49601C05B5B7662CA6AE599F /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */,
+				61CB979E332E4755603CBF74574F931A /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */,
+			);
+			name = "Pods-SLRGestureToolkitCore_Tests";
+			path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests";
+			sourceTree = "<group>";
+		};
+		393121A2B05703BC7D2D24063A82BCEC /* SLRGestureToolkitCore */ = {
+			isa = PBXGroup;
+			children = (
+				7B8EFAA56B0E3995104A3B533F37DB87 /* ReplaceMe.swift */,
+				CD353C377A7D7D0CDF91D881D2412831 /* Pod */,
+				916CCFD345F38FB856483D1A34F23076 /* Support Files */,
+			);
+			name = SLRGestureToolkitCore;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		44B7CC22A56A63A9D4F968E9C4646F89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				486D54C4B8AD096FDEA9FA7B06971865 /* Pods_SLRGestureToolkitCore_Example.framework */,
+				A48BDE2247F701850EC07DB095DA92E4 /* Pods_SLRGestureToolkitCore_Tests.framework */,
+				4574EFD1DD36B755C00C76C8B1723B13 /* SLRGestureToolkitCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		81A2A5E7373BF13D897507447C5D3D14 /* Pods-SLRGestureToolkitCore_Example */ = {
+			isa = PBXGroup;
+			children = (
+				8786E85DB1088507A9B2EDE90E75A145 /* Pods-SLRGestureToolkitCore_Example.modulemap */,
+				6EDCDB42CC78BE440E0DDD2B6C866E31 /* Pods-SLRGestureToolkitCore_Example-acknowledgements.markdown */,
+				757A12B18FC8703D12340436E012E340 /* Pods-SLRGestureToolkitCore_Example-acknowledgements.plist */,
+				4ED49454EE5BB06BCBEE31C6074FD638 /* Pods-SLRGestureToolkitCore_Example-dummy.m */,
+				CB8BC492CDC7C557DF642E7335CA3F3F /* Pods-SLRGestureToolkitCore_Example-frameworks.sh */,
+				834A44584225AB069CD8A252F8E003B6 /* Pods-SLRGestureToolkitCore_Example-Info.plist */,
+				B4A56243E7D485FC544B908F65E41A03 /* Pods-SLRGestureToolkitCore_Example-umbrella.h */,
+				EB87085B5650CF901E543DED0AE8948A /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */,
+				8C2D5CDFB5F7AEA434B185D38D99C616 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */,
+			);
+			name = "Pods-SLRGestureToolkitCore_Example";
+			path = "Target Support Files/Pods-SLRGestureToolkitCore_Example";
+			sourceTree = "<group>";
+		};
+		916CCFD345F38FB856483D1A34F23076 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDD79AC51CED471944CBD2A9BB796BBF /* SLRGestureToolkitCore.modulemap */,
+				3D6233329C584B466AF51048AF19AB85 /* SLRGestureToolkitCore-dummy.m */,
+				2E3E5DFF68E802C59CFC13577B5497B3 /* SLRGestureToolkitCore-Info.plist */,
+				3C5F8F7A3C5AD2869D23A034D1618683 /* SLRGestureToolkitCore-prefix.pch */,
+				4DFA8FEC346535CD168BF05644CF7D11 /* SLRGestureToolkitCore-umbrella.h */,
+				1A468925BD07240E441D19DCFA96DDE7 /* SLRGestureToolkitCore.debug.xcconfig */,
+				92C58F7DB9EE176632BFCE9D36A38E66 /* SLRGestureToolkitCore.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SLRGestureToolkitCore";
+			sourceTree = "<group>";
+		};
+		C8F11795B5EF1CBC1444327521A71FEB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				393121A2B05703BC7D2D24063A82BCEC /* SLRGestureToolkitCore */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CD353C377A7D7D0CDF91D881D2412831 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EF38003B2265A669E6AFA7671A4F1248 /* LICENSE */,
+				710E4061322B6305B6F7F7BC2BA552C4 /* README.md */,
+				1010C66F86F229AF60CC503FB5595BEE /* SLRGestureToolkitCore.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C8F11795B5EF1CBC1444327521A71FEB /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				44B7CC22A56A63A9D4F968E9C4646F89 /* Products */,
+				0B9C64ADF27432A88A3CD23070295EEE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6AD1AE586907BE1087A694B344915E7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47E81627447D51ABED4B0B03827961C3 /* Pods-SLRGestureToolkitCore_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5F86D2765E7FC310245DE5C38AA26C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF62A13DE6F2F83DD4AE9B5FBD6B8D7 /* Pods-SLRGestureToolkitCore_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9BD6999ED97BDDB7865658E4C0CC03A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB651F1FA0B4C8A99234C0DE09BF256 /* SLRGestureToolkitCore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0EA8EC17F3C48404B1D34C8BD921FA8D /* Pods-SLRGestureToolkitCore_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2435A2FFE1F514B1523AE9C51099F7F /* Build configuration list for PBXNativeTarget "Pods-SLRGestureToolkitCore_Example" */;
+			buildPhases = (
+				6AD1AE586907BE1087A694B344915E7B /* Headers */,
+				F9BA0FBA3D16FAF6A2E2A603D12E5B6D /* Sources */,
+				6AFF59A990B22EF8242C55EE855C18F3 /* Frameworks */,
+				6380A4FE64E33BE41F67DA38AEFE622E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B134CB53D57F02E306B070A0531D4897 /* PBXTargetDependency */,
+			);
+			name = "Pods-SLRGestureToolkitCore_Example";
+			productName = Pods_SLRGestureToolkitCore_Example;
+			productReference = 486D54C4B8AD096FDEA9FA7B06971865 /* Pods_SLRGestureToolkitCore_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8A45EEE18E55182FE19B547A5833510 /* Pods-SLRGestureToolkitCore_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A2AC2C0A8F5DC5053339EEE862F938 /* Build configuration list for PBXNativeTarget "Pods-SLRGestureToolkitCore_Tests" */;
+			buildPhases = (
+				AD5F86D2765E7FC310245DE5C38AA26C /* Headers */,
+				5848EC00ACFBFD1C4C72E834E30E80AB /* Sources */,
+				02961FC2E6F2C22CC9DE55DE90320358 /* Frameworks */,
+				410A5947646D446D528E36ACE96604DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17A3F49D2E8283404638B754BA878F6C /* PBXTargetDependency */,
+			);
+			name = "Pods-SLRGestureToolkitCore_Tests";
+			productName = Pods_SLRGestureToolkitCore_Tests;
+			productReference = A48BDE2247F701850EC07DB095DA92E4 /* Pods_SLRGestureToolkitCore_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F641872B213A41DB35E2754DC14023BC /* SLRGestureToolkitCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78BB410912ECC4CFA7789F8E95160571 /* Build configuration list for PBXNativeTarget "SLRGestureToolkitCore" */;
+			buildPhases = (
+				D9BD6999ED97BDDB7865658E4C0CC03A /* Headers */,
+				877C1C3F661647E074E0D04C6075FAFF /* Sources */,
+				C62D6A10A17EA9BEEA5F7E2D9357B3AD /* Frameworks */,
+				1F3753E1DF3DEF3BC67C02AE3F739EB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SLRGestureToolkitCore;
+			productName = SLRGestureToolkitCore;
+			productReference = 4574EFD1DD36B755C00C76C8B1723B13 /* SLRGestureToolkitCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 44B7CC22A56A63A9D4F968E9C4646F89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EA8EC17F3C48404B1D34C8BD921FA8D /* Pods-SLRGestureToolkitCore_Example */,
+				D8A45EEE18E55182FE19B547A5833510 /* Pods-SLRGestureToolkitCore_Tests */,
+				F641872B213A41DB35E2754DC14023BC /* SLRGestureToolkitCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F3753E1DF3DEF3BC67C02AE3F739EB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410A5947646D446D528E36ACE96604DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6380A4FE64E33BE41F67DA38AEFE622E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5848EC00ACFBFD1C4C72E834E30E80AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09574116717F1B8CCDA61BA8B39F13E0 /* Pods-SLRGestureToolkitCore_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877C1C3F661647E074E0D04C6075FAFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DD11FE5E4B363DD0C1483E1BA772C1 /* ReplaceMe.swift in Sources */,
+				3F2FD94FE38DFE89EC9E166F6FE219F9 /* SLRGestureToolkitCore-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BA0FBA3D16FAF6A2E2A603D12E5B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				212570C5C2B90FB4F827805DCB5D41C1 /* Pods-SLRGestureToolkitCore_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17A3F49D2E8283404638B754BA878F6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SLRGestureToolkitCore_Example";
+			target = 0EA8EC17F3C48404B1D34C8BD921FA8D /* Pods-SLRGestureToolkitCore_Example */;
+			targetProxy = 9083F9AF10E1E42560A18314026C278D /* PBXContainerItemProxy */;
+		};
+		B134CB53D57F02E306B070A0531D4897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SLRGestureToolkitCore;
+			target = F641872B213A41DB35E2754DC14023BC /* SLRGestureToolkitCore */;
+			targetProxy = 2DFB9B0B47771AF0FDE8E5277158941F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26229357086243A23D6665E368644415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61CB979E332E4755603CBF74574F931A /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D2BC88F06A9F0F765A9AF7EE189FF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB87085B5650CF901E543DED0AE8948A /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64BE487BCA6CA0B219052E5437D74431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D425AC8D49601C05B5B7662CA6AE599F /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		695072DEBD0DC2F36B27EC38582E06DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C2D5CDFB5F7AEA434B185D38D99C616 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A35CC2DEA3B8F454956C5175746739AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C58F7DB9EE176632BFCE9D36A38E66 /* SLRGestureToolkitCore.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SLRGestureToolkitCore/SLRGestureToolkitCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SLRGestureToolkitCore/SLRGestureToolkitCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SLRGestureToolkitCore/SLRGestureToolkitCore.modulemap";
+				PRODUCT_MODULE_NAME = SLRGestureToolkitCore;
+				PRODUCT_NAME = SLRGestureToolkitCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E2AA4FB0AEB43FEC00DEC142E1D90AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A468925BD07240E441D19DCFA96DDE7 /* SLRGestureToolkitCore.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SLRGestureToolkitCore/SLRGestureToolkitCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SLRGestureToolkitCore/SLRGestureToolkitCore-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SLRGestureToolkitCore/SLRGestureToolkitCore.modulemap";
+				PRODUCT_MODULE_NAME = SLRGestureToolkitCore;
+				PRODUCT_NAME = SLRGestureToolkitCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78BB410912ECC4CFA7789F8E95160571 /* Build configuration list for PBXNativeTarget "SLRGestureToolkitCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2AA4FB0AEB43FEC00DEC142E1D90AD4 /* Debug */,
+				A35CC2DEA3B8F454956C5175746739AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2435A2FFE1F514B1523AE9C51099F7F /* Build configuration list for PBXNativeTarget "Pods-SLRGestureToolkitCore_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D2BC88F06A9F0F765A9AF7EE189FF0B /* Debug */,
+				695072DEBD0DC2F36B27EC38582E06DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A2AC2C0A8F5DC5053339EEE862F938 /* Build configuration list for PBXNativeTarget "Pods-SLRGestureToolkitCore_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64BE487BCA6CA0B219052E5437D74431 /* Debug */,
+				26229357086243A23D6665E368644415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
