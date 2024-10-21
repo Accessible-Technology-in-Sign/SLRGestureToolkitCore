@@ -4,10 +4,4 @@ platform :ios, '15.0'
 
 target 'SLRGestureToolkitCore_Example' do
   pod 'SLRGestureToolkitCore', :path => '../'
-
-  target 'SLRGestureToolkitCore_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
