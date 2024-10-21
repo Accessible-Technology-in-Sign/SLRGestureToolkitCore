@@ -32,7 +32,6 @@
 		AEB7976CBE75A6B6C2321175 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B2CCEAD5F4919359D4989D80 /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B99912ADDB69B7169587AD20 /* libPods-SLRGestureToolkitCore_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLRGestureToolkitCore_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBBF1D8392F8A5B7DF6F87D4 /* libPods-SLRGestureToolkitCore_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLRGestureToolkitCore_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1FE13B621C09783A1A7C7F /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				B99912ADDB69B7169587AD20 /* libPods-SLRGestureToolkitCore_Example.a */,
-				DBBF1D8392F8A5B7DF6F87D4 /* libPods-SLRGestureToolkitCore_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
