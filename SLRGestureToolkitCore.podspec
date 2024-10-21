@@ -28,9 +28,12 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/eshwavin@gmail.com/SLRGestureToolkitCore.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '15.0'
+  
+  s.dependency 'MediaPipeTasksVision', '~> 0.10.14'
+  s.dependency 'TensorFlowLiteSwift'
 
-  s.source_files = 'SLRGestureToolkitCore/Classes/**/*'
+  s.source_files = "Source/**/*"
   
   # s.resource_bundles = {
   #   'SLRGestureToolkitCore' => ['SLRGestureToolkitCore/Assets/*.png']
