@@ -16,7 +16,15 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "15.0"
   },
-  "source_files": "SLRGestureToolkitCore/Classes/**/*"
+  "dependencies": {
+    "MediaPipeTasksVision": [
+      "~> 0.10.14"
+    ],
+    "TensorFlowLiteSwift": [
+
+    ]
+  },
+  "source_files": "Source/**/*"
 }
