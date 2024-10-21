@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.dependency 'MediaPipeTasksVision', '~> 0.10.14'
   s.dependency 'TensorFlowLiteSwift'
 
-  s.source_files = "Source/**/*"
+  s.source_files = "SLRGestureToolkitCore/Source/**/*"
   
   # s.resource_bundles = {
   #   'SLRGestureToolkitCore' => ['SLRGestureToolkitCore/Assets/*.png']

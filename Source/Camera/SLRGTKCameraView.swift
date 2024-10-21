@@ -263,6 +263,7 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
     func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
         let currentTimeMs = Date().timeIntervalSince1970 * 1000
         // Pass the pixel buffer to mediapipe
+        
         backgroundQueue.async { [weak self] in
             self?.handLandmarkerService?.detectAsync(
                 sampleBuffer: sampleBuffer,

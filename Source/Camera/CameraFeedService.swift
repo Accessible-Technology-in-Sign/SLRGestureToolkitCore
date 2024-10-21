@@ -95,7 +95,7 @@ final class CameraFeedService: NSObject {
         attemptToConfigureSession()
         NotificationCenter.default.addObserver(
             self, selector: #selector(orientationChanged),
-            name: UIDevice.orientationDidChangeNotification,
+            name: NSNotification.Name.UIDeviceOrientationDidChange,
             object: nil)
     }
     
@@ -299,8 +299,8 @@ final class CameraFeedService: NSObject {
         
         if let bestFormat {
             videoDeviceInput.device.activeFormat = bestFormat
-            videoDeviceInput.device.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 60)
-            videoDeviceInput.device.activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: 60)
+            videoDeviceInput.device.activeVideoMinFrameDuration = CMTimeMake(1, 60)
+            videoDeviceInput.device.activeVideoMaxFrameDuration = CMTimeMake(1, 60)
         }
         
         videoDeviceInput.device.unlockForConfiguration()

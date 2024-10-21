@@ -7,30 +7,7 @@
 
 import Foundation
 
-protocol Buffer {
-    associatedtype T
-    var items: [T] { get }
-    func addItem(_ item: T)
-    func clear(keepingCapacity: Bool)
-}
-
-extension Buffer {
-    func clear(keepingCapacity: Bool = false) {
-        clear(keepingCapacity: keepingCapacity)
-    }
-}
-
-final class SlidingWindowBuffer<T>: Buffer {
-    var items: [T]
-    
-    func addItem(_ item: T) {
-        
-    }
-    
-    
-}
-
-final class DefaultBuffer<T>: Buffer {
+final class Buffer<T> {
     
     private let bufferQueue = DispatchQueue(label: "com.wavinDev.Buffer", qos: .background, attributes: .concurrent)
     

@@ -1,16 +1,41 @@
 PODS:
-  - SLRGestureToolkitCore (0.1.0)
+  - MediaPipeTasksCommon (0.10.15)
+  - MediaPipeTasksVision (0.10.15):
+    - MediaPipeTasksCommon (= 0.10.15)
+  - SLRGestureToolkitCore (0.1.0):
+    - MediaPipeTasksVision (~> 0.10.14)
+    - TensorFlowLiteSwift
+  - TensorFlowLiteC (2.17.0):
+    - TensorFlowLiteC/Core (= 2.17.0)
+  - TensorFlowLiteC/Core (2.17.0)
+  - TensorFlowLiteSwift (2.17.0):
+    - TensorFlowLiteSwift/Core (= 2.17.0)
+  - TensorFlowLiteSwift/Core (2.17.0):
+    - TensorFlowLiteC (= 2.17.0)
+    - TensorFlowLiteSwift/Privacy (= 2.17.0)
+  - TensorFlowLiteSwift/Privacy (2.17.0)
 
 DEPENDENCIES:
   - SLRGestureToolkitCore (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - MediaPipeTasksCommon
+    - MediaPipeTasksVision
+    - TensorFlowLiteC
+    - TensorFlowLiteSwift
 
 EXTERNAL SOURCES:
   SLRGestureToolkitCore:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SLRGestureToolkitCore: 6040e812aefd6f6c782c0e1f2e6f2bb3e327a968
+  MediaPipeTasksCommon: a41b4dfd62750a936e783a7018d0d619f82fc245
+  MediaPipeTasksVision: d43cdd444d3410518f9e27944526b4b8deaf00ae
+  SLRGestureToolkitCore: 7a399f53999632afea8ef74da6f1d62919cc46e6
+  TensorFlowLiteC: eac6d689a8d391d1b202dc59e3d9165ba64aaf73
+  TensorFlowLiteSwift: 723fe42222815e72490c79feeff05305530de393
 
-PODFILE CHECKSUM: 1d3994ba30758d3ea163544f7e6ec346050e95b0
+PODFILE CHECKSUM: cc146a96541d6c39cf19cc8f9249e56c2bc9fa3d
 
 COCOAPODS: 1.14.3

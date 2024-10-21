@@ -7,29 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08F8F2C30CC5F169FF63EF1C /* Pods_SLRGestureToolkitCore_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93AC7EABC07D6DEA9B48F31 /* Pods_SLRGestureToolkitCore_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		72BC62ACA20116C132D07F13 /* Pods_SLRGestureToolkitCore_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D227F6A496B455FD8344974 /* Pods_SLRGestureToolkitCore_Example.framework */; };
+		CA1DE1810E31D89D26D38CC6 /* libPods-SLRGestureToolkitCore_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B99912ADDB69B7169587AD20 /* libPods-SLRGestureToolkitCore_Example.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SLRGestureToolkitCore;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1D227F6A496B455FD8344974 /* Pods_SLRGestureToolkitCore_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLRGestureToolkitCore_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BECC8463D357DF5ED8FD261 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Example.release.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2B2D293CE81CC53818517F10 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2E7DA1AD874C8160764BED8E /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SLRGestureToolkitCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLRGestureToolkitCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,16 +26,14 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* SLRGestureToolkitCore_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLRGestureToolkitCore_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7E23ADF0EF5BF5C2769F678A /* SLRGestureToolkitCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SLRGestureToolkitCore.podspec; path = ../SLRGestureToolkitCore.podspec; sourceTree = "<group>"; };
-		8BFA6331057D54C22E4D4572 /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7E23ADF0EF5BF5C2769F678A /* SLRGestureToolkitCore.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SLRGestureToolkitCore.podspec; path = ../SLRGestureToolkitCore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AEB7976CBE75A6B6C2321175 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B93AC7EABC07D6DEA9B48F31 /* Pods_SLRGestureToolkitCore_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLRGestureToolkitCore_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC002C81E0BE3FF348A5D1C2 /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D8A26020567B48EE96AA4D6B /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Example.release.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D9827F56EFC489B80CC24112 /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2CCEAD5F4919359D4989D80 /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B99912ADDB69B7169587AD20 /* libPods-SLRGestureToolkitCore_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLRGestureToolkitCore_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBF1D8392F8A5B7DF6F87D4 /* libPods-SLRGestureToolkitCore_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SLRGestureToolkitCore_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1FE13B621C09783A1A7C7F /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Tests/Pods-SLRGestureToolkitCore_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,15 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72BC62ACA20116C132D07F13 /* Pods_SLRGestureToolkitCore_Example.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08F8F2C30CC5F169FF63EF1C /* Pods_SLRGestureToolkitCore_Tests.framework in Frameworks */,
+				CA1DE1810E31D89D26D38CC6 /* libPods-SLRGestureToolkitCore_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +56,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				978D944D8758C56B2E6B7FE8 /* Pods */,
-				8B59D16C8A714D5C206C0C35 /* Frameworks */,
+				C24381976B907FB996B3954D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* SLRGestureToolkitCore_Example.app */,
-				607FACE51AFB9204008FA782 /* SLRGestureToolkitCore_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,24 +117,24 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		8B59D16C8A714D5C206C0C35 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1D227F6A496B455FD8344974 /* Pods_SLRGestureToolkitCore_Example.framework */,
-				B93AC7EABC07D6DEA9B48F31 /* Pods_SLRGestureToolkitCore_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		978D944D8758C56B2E6B7FE8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8BFA6331057D54C22E4D4572 /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */,
-				D8A26020567B48EE96AA4D6B /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */,
-				D9827F56EFC489B80CC24112 /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */,
-				CC002C81E0BE3FF348A5D1C2 /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */,
+				2E7DA1AD874C8160764BED8E /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */,
+				0BECC8463D357DF5ED8FD261 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */,
+				EA1FE13B621C09783A1A7C7F /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */,
+				B2CCEAD5F4919359D4989D80 /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C24381976B907FB996B3954D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B99912ADDB69B7169587AD20 /* libPods-SLRGestureToolkitCore_Example.a */,
+				DBBF1D8392F8A5B7DF6F87D4 /* libPods-SLRGestureToolkitCore_Tests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SLRGestureToolkitCore_Example" */;
 			buildPhases = (
-				D6D43C43477D4AE633760C38 /* [CP] Check Pods Manifest.lock */,
+				EB1F893A6135742DDC406BAF /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				7EEB686748CF8A25FC19458E /* [CP] Embed Pods Frameworks */,
+				B0312369567F57010EEF7FE9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,25 +158,6 @@
 			productName = SLRGestureToolkitCore;
 			productReference = 607FACD01AFB9204008FA782 /* SLRGestureToolkitCore_Example.app */;
 			productType = "com.apple.product-type.application";
-		};
-		607FACE41AFB9204008FA782 /* SLRGestureToolkitCore_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SLRGestureToolkitCore_Tests" */;
-			buildPhases = (
-				B58E3AE2D0F092B47E3F5F53 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
-			);
-			name = SLRGestureToolkitCore_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* SLRGestureToolkitCore_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -214,12 +173,6 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = R23A4AUCN9;
 						LastSwiftMigration = 0900;
-					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = R23A4AUCN9;
-						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -238,7 +191,6 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* SLRGestureToolkitCore_Example */,
-				607FACE41AFB9204008FA782 /* SLRGestureToolkitCore_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,57 +206,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7EEB686748CF8A25FC19458E /* [CP] Embed Pods Frameworks */ = {
+		B0312369567F57010EEF7FE9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SLRGestureToolkitCore/SLRGestureToolkitCore.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteC/TensorFlowLiteC.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteSwift/TensorFlowLite.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SLRGestureToolkitCore.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TensorFlowLiteC.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TensorFlowLite.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B58E3AE2D0F092B47E3F5F53 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SLRGestureToolkitCore_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D6D43C43477D4AE633760C38 /* [CP] Check Pods Manifest.lock */ = {
+		EB1F893A6135742DDC406BAF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,23 +263,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* SLRGestureToolkitCore_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -477,7 +386,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BFA6331057D54C22E4D4572 /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */;
+			baseConfigurationReference = 2E7DA1AD874C8160764BED8E /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R23A4AUCN9;
@@ -494,7 +403,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A26020567B48EE96AA4D6B /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */;
+			baseConfigurationReference = 0BECC8463D357DF5ED8FD261 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R23A4AUCN9;
@@ -506,50 +415,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9827F56EFC489B80CC24112 /* Pods-SLRGestureToolkitCore_Tests.debug.xcconfig */;
-			buildSettings = {
-				DEVELOPMENT_TEAM = R23A4AUCN9;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLRGestureToolkitCore_Example.app/SLRGestureToolkitCore_Example";
-			};
-			name = Debug;
-		};
-		607FACF41AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC002C81E0BE3FF348A5D1C2 /* Pods-SLRGestureToolkitCore_Tests.release.xcconfig */;
-			buildSettings = {
-				DEVELOPMENT_TEAM = R23A4AUCN9;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SLRGestureToolkitCore_Example.app/SLRGestureToolkitCore_Example";
 			};
 			name = Release;
 		};
@@ -570,15 +435,6 @@
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
 				607FACF11AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SLRGestureToolkitCore_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
