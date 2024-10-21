@@ -8,16 +8,16 @@
 import UIKit
 import MediaPipeTasksVision
 
-protocol SLRGTKCameraViewDelegate: AnyObject {
+public protocol SLRGTKCameraViewDelegate: AnyObject {
     func cameraViewDidBeginInferring()
     func cameraViewDidSetupEngine()
     func cameraViewDidInferSign(_ signInferenceResult: SignInferenceResult)
     func cameraViewDidThrowError(_ error: Error)
 }
 
-final class SLRGTKCameraView: UIView {
+public final class SLRGTKCameraView: UIView {
     
-    weak var delegate: SLRGTKCameraViewDelegate?
+    public weak var delegate: SLRGTKCameraViewDelegate?
     
     private lazy var buffer: Buffer<HandLandmarkerResult> = Buffer(capacity: settings.signInferenceSettings.numberOfFramesPerInference)
     
@@ -70,11 +70,12 @@ final class SLRGTKCameraView: UIView {
     }
     
     required init?(coder: NSCoder) {
+        self.settings = .defaultSettings
         super.init(coder: coder)
         setupUI()
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         cameraFeedService.updateVideoPreviewLayer(toFrame: bounds)
     }
@@ -135,7 +136,7 @@ extension SLRGTKCameraView {
 // MARK: - Start
 extension SLRGTKCameraView {
     
-    func start() {
+    public func start() {
         initializeHandLandmarkerServiceOnSessionResumption()
         cameraFeedService.startLiveCameraSession { [weak self] cameraConfiguration in
             DispatchQueue.main.async {
@@ -260,7 +261,7 @@ extension SLRGTKCameraView {
 }
 
 extension SLRGTKCameraView: CameraFeedServiceDelegate {
-    func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
+    public func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
         let currentTimeMs = Date().timeIntervalSince1970 * 1000
         // Pass the pixel buffer to mediapipe
         
@@ -274,7 +275,7 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
     }
     
     // MARK: Session Handling Alerts
-    func sessionWasInterrupted(canResumeManually resumeManually: Bool) {
+    public func sessionWasInterrupted(canResumeManually resumeManually: Bool) {
         // Updates the UI when session is interupted.
         if resumeManually {
             resumeButton.isHidden = false
@@ -284,14 +285,14 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
         clearhandLandmarkerServiceOnSessionInterruption()
     }
     
-    func sessionInterruptionEnded() {
+    public func sessionInterruptionEnded() {
         // Updates UI once session interruption has ended.
         cameraUnavailableLabel.isHidden = true
         resumeButton.isHidden = true
         initializeHandLandmarkerServiceOnSessionResumption()
     }
     
-    func didEncounterSessionRuntimeError() {
+    public func didEncounterSessionRuntimeError() {
         // Handles session run time error by updating the UI and providing a button if session can be
         // manually resumed.
         resumeButton.isHidden = false

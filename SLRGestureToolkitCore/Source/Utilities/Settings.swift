@@ -8,21 +8,21 @@
 import UIKit
 import MediaPipeTasksVision
 
-struct SLRGTKSettings {
+public struct SLRGTKSettings {
     
     let isContinuous: Bool
     
     let handlandmarkerSettings: HandLandmarkerSettings
     let signInferenceSettings: SignInferenceSettings
     
-    static var defaultSettings: SLRGTKSettings = SLRGTKSettings(
+    public static var defaultSettings: SLRGTKSettings = SLRGTKSettings(
         isContinuous: false,
         handlandmarkerSettings: HandLandmarkerSettings(),
         signInferenceSettings: SignInferenceSettings()
     )
 }
 
-struct HandLandmarkerSettings {
+public struct HandLandmarkerSettings {
     let lineWidth: CGFloat
     let pointRadius: CGFloat
     let pointColor: UIColor
@@ -74,7 +74,7 @@ struct HandLandmarkerSettings {
     }
 }
 
-struct SignInferenceSettings {
+public struct SignInferenceSettings {
     
     let numberOfFramesPerInference: Int
     let numberOfPointsPerLandmark: Int

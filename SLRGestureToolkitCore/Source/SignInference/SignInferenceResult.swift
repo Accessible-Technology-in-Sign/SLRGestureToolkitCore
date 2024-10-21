@@ -15,7 +15,7 @@ struct SignInference {
     let label: String
 }
 
-struct SignInferenceResult {
+public struct SignInferenceResult {
     let inferenceTime: Double
     let inferences: [SignInference]
 }
