@@ -19,7 +19,7 @@ public final class SLRGTKCameraView: UIView {
     
     public weak var delegate: SLRGTKCameraViewDelegate?
     
-    private lazy var buffer: Buffer<HandLandmarkerResult> = Buffer(capacity: settings.signInferenceSettings.numberOfFramesPerInference)
+    private lazy var buffer: any Buffer = settings.signInferenceSettings.getBuffer()
     
     private let handLandmarkerServiceQueue = DispatchQueue(
         label: "com.wavinDev.cameraView.handLandmarkerServiceQueue",
@@ -106,7 +106,7 @@ public final class SLRGTKCameraView: UIView {
     }
     
     private func configureBuffer() {
-        buffer = Buffer(capacity: settings.signInferenceSettings.numberOfFramesPerInference)
+        buffer = settings.signInferenceSettings.getBuffer()
     }
     
     private func setupSignInferenceService() {
@@ -195,8 +195,6 @@ extension SLRGTKCameraView {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let strongSelf = self else { return }
             
-            var handLandmarks = strongSelf.buffer.items
-            
             DispatchQueue.main.async { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.delegate?.cameraViewDidBeginInferring()
@@ -205,43 +203,17 @@ extension SLRGTKCameraView {
                 }
             }
             
-            var inferenceData: [Float] = []
-            
-            let numberOfPointsPerLandmark = strongSelf.settings.signInferenceSettings.numberOfPointsPerLandmark
-            let numberOfFramesPerInference = strongSelf.settings.signInferenceSettings.numberOfFramesPerInference
-            
-            guard !handLandmarks.isEmpty else {
-                strongSelf.delegate?.cameraViewDidThrowError(DependencyError.noLandmarks)
-                return
-            }
-            
-            if handLandmarks.count < numberOfFramesPerInference {
-                let midPoint = handLandmarks.count / 2
+            do {
+                let inferenceData = try strongSelf.buffer.getInferenceData()
                 
-                for _ in 0 ..< (numberOfFramesPerInference - handLandmarks.count) {
-                    handLandmarks.append(handLandmarks[midPoint])
+                if let inferenceResults = strongSelf.signInferenceService?.runModel(using: inferenceData) {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.delegate?.cameraViewDidInferSign(inferenceResults)
+                    }
                 }
-                
-            }
-            
-            handLandmarks.forEach { landmark in
-                guard let normalizedLandmarks = landmark.landmarks.first,
-                      normalizedLandmarks.count == numberOfPointsPerLandmark else {
-                    strongSelf.delegate?.cameraViewDidThrowError(DependencyError.landmarkStructure)
-                    return // TODO: Keep this condition in sync with Android
-                }
-                
-                for i in 0 ..< numberOfPointsPerLandmark {
-                    inferenceData.append(normalizedLandmarks[i].x)
-                    inferenceData.append(normalizedLandmarks[i].y)
-                }
-            }
-            
-            if let inferenceResults = strongSelf.signInferenceService?.runModel(using: inferenceData) {
-                DispatchQueue.main.async { [weak self] in
-                    guard let strongSelf = self else { return }
-                    strongSelf.delegate?.cameraViewDidInferSign(inferenceResults)
-                }
+            } catch {
+                strongSelf.delegate?.cameraViewDidThrowError(error)
             }
         }
     }
