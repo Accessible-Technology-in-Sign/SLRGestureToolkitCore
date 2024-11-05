@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113E0A0C2CDA41060023E310 /* BasicExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E0A0B2CDA41060023E310 /* BasicExampleViewController.swift */; };
+		113E0A0E2CDA41320023E310 /* UIView+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113E0A0D2CDA41320023E310 /* UIView+Fade.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		0BECC8463D357DF5ED8FD261 /* Pods-SLRGestureToolkitCore_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Example.release.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.release.xcconfig"; sourceTree = "<group>"; };
+		113E0A0B2CDA41060023E310 /* BasicExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleViewController.swift; sourceTree = "<group>"; };
+		113E0A0D2CDA41320023E310 /* UIView+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Fade.swift"; sourceTree = "<group>"; };
 		2B2D293CE81CC53818517F10 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2E7DA1AD874C8160764BED8E /* Pods-SLRGestureToolkitCore_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; path = "Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SLRGestureToolkitCore_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SLRGestureToolkitCore_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				113E0A0B2CDA41060023E310 /* BasicExampleViewController.swift */,
+				113E0A0D2CDA41320023E310 /* UIView+Fade.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -214,11 +220,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SLRGestureToolkitCore_Example/Pods-SLRGestureToolkitCore_Example-resources.sh",
+				"${PODS_ROOT}/../../SLRGestureToolkitCore/Source/MLAssets/hand_landmarker.task",
+				"${PODS_ROOT}/../../SLRGestureToolkitCore/Source/MLAssets/model_2.tflite",
+				"${PODS_ROOT}/../../SLRGestureToolkitCore/Source/MLAssets/signsList.txt",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SLRGestureToolkitCore/SLRGestureToolkitCore.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteC/TensorFlowLiteC.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteSwift/TensorFlowLite.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/hand_landmarker.task",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/model_2.tflite",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/signsList.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SLRGestureToolkitCore.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TensorFlowLiteC.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TensorFlowLite.bundle",
 			);
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113E0A0E2CDA41320023E310 /* UIView+Fade.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				113E0A0C2CDA41060023E310 /* BasicExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

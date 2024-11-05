@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   MediaPipeTasksCommon: a41b4dfd62750a936e783a7018d0d619f82fc245
   MediaPipeTasksVision: d43cdd444d3410518f9e27944526b4b8deaf00ae
-  SLRGestureToolkitCore: 7a399f53999632afea8ef74da6f1d62919cc46e6
+  SLRGestureToolkitCore: 1bd0c64d5fdeb578be876e922f34ac789b424755
   TensorFlowLiteC: eac6d689a8d391d1b202dc59e3d9165ba64aaf73
   TensorFlowLiteSwift: 723fe42222815e72490c79feeff05305530de393
 
