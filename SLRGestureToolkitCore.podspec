@@ -35,6 +35,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = "SLRGestureToolkitCore/Source/**/*"
   
+  s.resource_bundles = {
+      'SLRGestureToolkitCore' => ['SLRGestureToolkitCore/MLAssets/*.task',
+      'SLRGestureToolkitCore/MLAssets/*.tflite', 'SLRGestureToolkitCore/MLAssets/*.txt']
+  }
+  
+  s.resources = ['SLRGestureToolkitCore/MLAssets/*.task', 'SLRGestureToolkitCore/MLAssets/*.tflite', 'SLRGestureToolkitCore/MLAssets/*.txt']
+  
   # s.resource_bundles = {
   #   'SLRGestureToolkitCore' => ['SLRGestureToolkitCore/Assets/*.png']
   # }

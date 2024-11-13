@@ -10,7 +10,7 @@ import Foundation
 struct AssetPath {
     let name: String
     let fileExtension: String
-    let bundle: Bundle = .main
+    let bundle = Bundle.main
     
     var resourcePathString: String? {
         return bundle.path(forResource: name, ofType: fileExtension)

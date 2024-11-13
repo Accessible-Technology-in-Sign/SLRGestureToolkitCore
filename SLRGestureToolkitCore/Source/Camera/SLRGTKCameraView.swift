@@ -80,7 +80,7 @@ public final class SLRGTKCameraView: UIView {
         cameraFeedService.updateVideoPreviewLayer(toFrame: bounds)
     }
     
-    func setupEngine() {
+    public func setupEngine() {
         setupSignInferenceService()
         configureBuffer()
         delegate?.cameraViewDidSetupEngine()
@@ -190,7 +190,7 @@ extension SLRGTKCameraView {
 // MARK: - Detection
 extension SLRGTKCameraView {
     
-    func detect() {
+    public func detect() {
         
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let strongSelf = self else { return }

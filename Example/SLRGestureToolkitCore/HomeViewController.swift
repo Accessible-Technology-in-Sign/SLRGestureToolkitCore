@@ -1,4 +1,13 @@
 //
+//  HomeViewController.swift
+//  SLRGestureToolkitCore_Example
+//
+//  Created by Kellen Madigan on 10/25/24.
+//  Copyright © 2024 CocoaPods. All rights reserved.
+//
+
+
+//
 //  ViewController.swift
 //  iOS-ToolKit
 //
@@ -6,6 +15,7 @@
 //
 
 import UIKit
+import SLRGestureToolkitCore
 
 final class HomeViewController: UIViewController {
     
