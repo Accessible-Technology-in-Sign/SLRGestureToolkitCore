@@ -37,7 +37,7 @@ Triggers the actual detection and inference of sign gestures based on captured c
 
 #### `SLRGTKCameraViewDelegate`
 
-`SLRGTKCameraView` has a property `var delegate: SLRGTKCameraViewDelegate`. You can set a conforming class to the property to listen to callbacks.
+`SLRGTKCameraView` has a property `var delegate: SLRGTKCameraViewDelegate`. You can set a conforming object to the property to listen to callbacks.
 
 ```swift
 func cameraViewDidSetupEngine()
