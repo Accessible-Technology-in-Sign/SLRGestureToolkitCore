@@ -4,21 +4,33 @@
 //
 //  Created by Unnathi Utpal Kumar, Kellen Madigan, and David Nuthakki.
 //
+
 import UIKit
 import SLRGestureToolkitCore
 
 final class BoggleHomeViewController: UIViewController {
+    
     private let gridSize: Int
     private var boardButtons: [[UIButton]] = []
     private var currentWord: String = ""
+    
     private let game: BoggleGame
-    private var inferenceLabel: UILabel!
+    
+    private let inferenceLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.text = "When You See a Word Sign It!"
+        label.textColor = .white
+        return label
+    }()
+    
     private var signButton: UIButton = UIButton()
     private let cameraView = SLRGTKCameraView()
     private let closeButton = UIButton(type: .close)
     private var containerView = UIView()
     
-    init(words: Set<String>, gridSize: Int) {
+    init(words: Set<String> = ["DOG", "CAT", "APPLE", "JUMP", "QUIET"], gridSize: Int) {
         self.game = BoggleGame(gridSize: gridSize, words: words)
         self.gridSize = gridSize
         super.init(nibName: nil, bundle: nil)
@@ -50,31 +62,31 @@ final class BoggleHomeViewController: UIViewController {
     }
     
     private func setupCameraView() {
-            cameraView.isHidden = true
-            view.addSubview(cameraView)
-            cameraView.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                cameraView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                cameraView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                cameraView.topAnchor.constraint(equalTo: view.topAnchor),
-                cameraView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
-            
-            cameraView.delegate = self
+        cameraView.isHidden = true
+        view.addSubview(cameraView)
+        cameraView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            cameraView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            cameraView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            cameraView.topAnchor.constraint(equalTo: view.topAnchor),
+            cameraView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        cameraView.delegate = self
     }
     
     private func setupContainerView() {
-            containerView.backgroundColor = .clear
-            view.addSubview(containerView)
-            containerView.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                containerView.topAnchor.constraint(equalTo: view.topAnchor),
-                containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            ])
+        containerView.backgroundColor = .clear
+        view.addSubview(containerView)
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            containerView.topAnchor.constraint(equalTo: view.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func setupBoard() {
@@ -110,12 +122,6 @@ final class BoggleHomeViewController: UIViewController {
     }
     
     private func setupWordLabel() {
-        inferenceLabel = UILabel()
-        inferenceLabel.textAlignment = .center
-        inferenceLabel.font = UIFont.boldSystemFont(ofSize: 24)
-        inferenceLabel.text = "When You See a Word Sign It!"
-        inferenceLabel.textColor = .white
-        
         containerView.addSubview(inferenceLabel)
         inferenceLabel.translatesAutoresizingMaskIntoConstraints = false
         inferenceLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
@@ -130,7 +136,7 @@ final class BoggleHomeViewController: UIViewController {
         signButton.addTarget(self, action: #selector(didTouchDownInsideStartButton(_:)), for: .touchDown)
         signButton.addTarget(self, action: #selector(didTouchUpStartButton(_:)), for: .touchUpInside)
         signButton.addTarget(self, action: #selector(didTouchUpStartButton(_:)), for: .touchUpOutside)
-
+        
         containerView.addSubview(signButton)
         signButton.translatesAutoresizingMaskIntoConstraints = false
         signButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
@@ -164,26 +170,26 @@ final class BoggleHomeViewController: UIViewController {
     }
     
     @objc private func submitWord() {
-            //highlightFoundWord()
-            if let wordPositions = game.getDictionary()[currentWord] {
-                let alertValid = UIAlertController(
-                    title: "Well done!",
-                    message: "The word '\(currentWord)' is present.",
-                    preferredStyle: .alert)
-                alertValid.addAction(UIAlertAction(title: "GREAT", style: .default, handler: {_ in self.highlightWordPositions(wordPositions)
-                }))
-                present(alertValid, animated: true, completion: nil)
-                inferenceLabel.text = "Find Another Word!"
-            }   else {
-                    let alertInvalid = UIAlertController(
-                        title: "Not quite",
-                        message: "The word '\(currentWord)' is not present.",
-                        preferredStyle: .alert
+        //highlightFoundWord()
+        if let wordPositions = game.getDictionary()[currentWord] {
+            let alertValid = UIAlertController(
+                title: "Well done!",
+                message: "The word '\(currentWord)' is present.",
+                preferredStyle: .alert)
+            alertValid.addAction(UIAlertAction(title: "GREAT", style: .default, handler: {_ in self.highlightWordPositions(wordPositions)
+            }))
+            present(alertValid, animated: true, completion: nil)
+            inferenceLabel.text = "Find Another Word!"
+        }   else {
+            let alertInvalid = UIAlertController(
+                title: "Not quite",
+                message: "The word '\(currentWord)' is not present.",
+                preferredStyle: .alert
             )
-                alertInvalid.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                present(alertInvalid, animated: true, completion: nil)
-                inferenceLabel.text = "Try Again!"
-                currentWord = ""
+            alertInvalid.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertInvalid, animated: true, completion: nil)
+            inferenceLabel.text = "Try Again!"
+            currentWord = ""
         }
     }
     

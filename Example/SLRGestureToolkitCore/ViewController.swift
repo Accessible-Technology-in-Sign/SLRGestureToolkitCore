@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let button = UIButton()
         var buttonConfiguration = UIButton.Configuration.filled()
         buttonConfiguration.cornerStyle = .medium
-        buttonConfiguration.title = String(localized: "Bobble Game")
+        buttonConfiguration.title = String(localized: "Boggle Game")
         buttonConfiguration.baseBackgroundColor = .orange
         buttonConfiguration.baseForegroundColor = .white
         buttonConfiguration.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 24, bottom: 12, trailing: 24)
@@ -60,15 +60,9 @@ class ViewController: UIViewController {
     }
 
     @objc private func didTapShowBoggleGame(_ sender: UIButton) {
-        let words: Set<String> = ["DOG", "CAT", "APPLE", "JUMP", "QUIET"]
-        let boggleHomeViewController = BoggleHomeViewController(words: words, gridSize: 5)
+        let boggleHomeViewController = BoggleHomeViewController(gridSize: 5)
         boggleHomeViewController.modalPresentationStyle = .fullScreen
         present(boggleHomeViewController, animated: true)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
