@@ -20,36 +20,70 @@ it, simply add the following line to your Podfile:
 pod 'SLRGestureToolkitCore'
 ```
 
-## Author
+## Usage
 
-eshwavin@gmail.com, eshwavin@gmail.com, dnuthakki3@gmail.com, ktmadigan03@gmail.com
+### `SLRGTKCameraView`
+This class provides a camera interface within the app, enabling it to capture and process sign language gestures for word inference.
 
-## License
+#### Important functions
+`setupEngine()`
+Prepares the gesture recognition engine to analyze video input.
 
-SLRGestureToolkitCore is available under the MIT license. See the LICENSE file for more info.
+`start()`
+Begins the gesture recognition process by activating the camera feed.
 
-## Boggle Example
+`detect()` 
+Triggers the actual detection and inference of sign gestures based on captured camera input.
+
+#### `SLRGTKCameraViewDelegate`
+
+`SLRGTKCameraView` has a property `var delegate: SLRGTKCameraViewDelegate`. You can set a conforming class to the property to listen to callbacks.
+
+```swift
+func cameraViewDidSetupEngine()
+```
+Called when the engine has been setup. Engine setup is triggered by `SLRGTKCameraView.setupEngine()`
+
+---
+
+```swift
+func cameraViewDidBeginInferring()
+```
+Called when SLRGTKCameraView has started to infer the sign. Sign inference is triggered by `SLRGTKCameraView.detect()`
+
+---
+
+
+```swift
+func cameraViewDidInferSign(_ signInferenceResult: SignInferenceResult)
+```
+Provides the inferred result. The class `SignInferenceResult` contains an array of type `SignInference`. You can access the label of the inferred sign from the `label` property of `SignInference`.  
+
+---
+
+
+```swift
+func cameraViewDidThrowError(_ error: Error)
+```
+Provides any error that occured during any stage.
+
+## Example: Boggle
 
 ### Overview
->This iOS app acts as an example of utilizing the SLRGestureToolkitCore by being an interactive game where players can play Boggle and use sign language to recognize words from the board. The app integrates with a camera view to capture sign language gestures, and once a gesture is recognized, the word is checked against the Boggle board.
+This is an example of utilizing the SLRGestureToolkitCore by being an interactive game where players can play Boggle and use sign language to recognize words from the board. The app integrates with a camera view to capture sign language gestures, and once a gesture is recognized, the word is checked against the Boggle board.
 
 ### Setup
-**Step 1: Install Dependencies**
 
-This project uses the `SLRGestureToolkitCore` framework for sign language recognition. You should make sure to integrate the required framework using your preferred dependency manager (e.g. CocoaPods).
+**Step 1: Download and Install Dependencies**
 
-**Step 2: Set up the Game and Camera**
+- Download or clone the repository.
+- Open terminal and navigate to the **Example** folder
+- Run the command `pod install`
+- Open `SLRGestureToolkitCore.xcworkspace`
 
-The app works with a Boggle game that is initialized with a set of valid words and a grid size. The camera view is set up to recognize sign language gestures corresponding to words on the board.
+**Step 2: Run the app**
 
-**Step 3: Use the** `BoggleHomeViewController`
-
-This is the view controller of the Boggle example app. The BoggleHomeViewController contains the following key elements:
-1.	*Grid of Buttons:* Each button in the grid corresponds to a letter in the Boggle game.
-2.	*Inference Label:* Displays the word recognized by the camera based on the sign language input.
-3.	*Sign Button:* Initiates the recognition process when pressed, triggering the camera to start detecting signs.
-4.	*Close Button:* Closes the current view when tapped.
-
+You will need a physical device to use the app since it uses a camera. Use the target `SLRGestureToolkitCore-Example` to build and run on your device.
 
 ### Features
 
@@ -74,19 +108,12 @@ This is the view controller of the Boggle example app. The BoggleHomeViewControl
 - **Word Placement:** Places words on the grid while ensuring no overlap with other words unless necessary.
 - **Validation:** Verifies if the detected word exists on the Boggle board and highlights the valid positions.
 
-`SLRGTKCameraView`
-- **Purpose:** This class provides a camera interface within the app, enabling it to capture and process sign language gestures for word inference.
-- **Setup and Usage:**
-	- **setupEngine():** Prepares the gesture recognition engine to analyze video input.
-	- **start():** Begins the gesture recognition process by activating the camera feed.
-	- **detect():** Triggers the actual detection and inference of sign gestures based on captured camera input.
-- **Delegation:** Conforms to the SLRGTKCameraViewDelegate to communicate gesture inference results or errors back to the BoggleHomeViewController.
-- **UI Control:** Supports methods like fadeIn() and fadeOut() for smooth transitions when showing or hiding the camera view, which enhances user experience.
 
-
-`SLRGTKCameraViewDelegate`
-- **Gesture Detection:** The delegate methods handle the camera's feedback on the sign language gesture detected.
-- **Error Handling:** Provides feedback when an error occurs in detecting or inferring signs.
+### How to Use
+- Start the App: Upon launching, the Boggle board is displayed along with a label instructing the user to "Sign a Word".
+- Sign a Word: Use sign language to form a word. The app detects the word via the camera and checks if it exists on the Boggle board.
+- Feedback: If the word is valid, it is highlighted in green on the board. If not, a message is shown saying "Not quite".
+- Close the Game: The user can close the current view by pressing the close button.
 
 
 ### How It Works
@@ -94,12 +121,12 @@ This is the view controller of the Boggle example app. The BoggleHomeViewControl
 - Sign Language Detection: The camera view listens for signs. When a gesture is detected, the app attempts to match the sign to a word from the Boggle board. If a match is found, the word is highlighted in green on the board.
 - Feedback: After each sign is processed, a message is shown indicating whether the word was valid or not.
 
+## Authors
 
+- Srivinayak Chaitanya Eshwa: eshwavin@gmail.com 
+- dnuthakki3@gmail.com
+- ktmadigan03@gmail.com
 
-### How to Use
+## License
 
-1.	Start the App: Upon launching, the Boggle board is displayed along with a label instructing the user to "Sign a Word".
-2.	Sign a Word: Use sign language to form a word. The app detects the word via the camera and checks if it exists on the Boggle board.
-3.	Feedback: If the word is valid, it is highlighted in green on the board. If not, a message is shown saying "Not quite".
-4.	Close the Game: The user can close the current view by pressing the close button.
-
+SLRGestureToolkitCore is available under the MIT license. See the LICENSE file for more info.
