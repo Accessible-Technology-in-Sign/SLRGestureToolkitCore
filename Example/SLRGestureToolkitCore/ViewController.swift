@@ -20,19 +20,36 @@ class ViewController: UIViewController {
         button.configuration = buttonConfiguration
         return button
     }()
+    
+    private let boggleGameButton: UIButton = {
+        let button = UIButton()
+        var buttonConfiguration = UIButton.Configuration.filled()
+        buttonConfiguration.cornerStyle = .medium
+        buttonConfiguration.title = String(localized: "Bobble Game")
+        buttonConfiguration.baseBackgroundColor = .orange
+        buttonConfiguration.baseForegroundColor = .white
+        buttonConfiguration.contentInsets = NSDirectionalEdgeInsets(top: 12, leading: 24, bottom: 12, trailing: 24)
+        button.configuration = buttonConfiguration
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(basicExampleButton)
+        view.backgroundColor = .systemBackground
+        let stackView = UIStackView(arrangedSubviews: [basicExampleButton, boggleGameButton])
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        view.addSubview(stackView)
         
-        basicExampleButton.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints: [NSLayoutConstraint] = [
-            basicExampleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            basicExampleButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
         
+        boggleGameButton.addTarget(self, action: #selector(didTapShowBoggleGame(_:)), for: .touchUpInside)
         basicExampleButton.addTarget(self, action: #selector(didTapShowBasicExample(_:)), for: .touchUpInside)
     }
     
@@ -40,6 +57,13 @@ class ViewController: UIViewController {
         let basicExampleViewController = BasicExampleViewController()
         basicExampleViewController.modalPresentationStyle = .fullScreen
         present(basicExampleViewController, animated: true)
+    }
+
+    @objc private func didTapShowBoggleGame(_ sender: UIButton) {
+        let words: Set<String> = ["DOG", "CAT", "APPLE", "JUMP", "QUIET"]
+        let boggleHomeViewController = BoggleHomeViewController(words: words, gridSize: 5)
+        boggleHomeViewController.modalPresentationStyle = .fullScreen
+        present(boggleHomeViewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
