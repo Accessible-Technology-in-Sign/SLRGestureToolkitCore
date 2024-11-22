@@ -22,6 +22,14 @@ pod 'SLRGestureToolkitCore'
 
 ## Usage
 
+### Import the framework
+
+Import the framework in the files where you want to use the library
+
+```swift
+import SLRGestureToolkitCore
+```
+
 ### `SLRGTKCameraView`
 This class provides a camera interface within the app, enabling it to capture and process sign language gestures for word inference.
 
