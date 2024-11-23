@@ -29,7 +29,7 @@ final class BoggleHomeViewController: UIViewController {
         var buttonConfiguration = UIButton.Configuration.filled()
         buttonConfiguration.cornerStyle = .medium
         
-        buttonConfiguration.attributedTitle = AttributedString("Sign", attributes: AttributeContainer([.font: UIFont.boldSystemFont(ofSize: 24)]))
+        buttonConfiguration.title = String(localized: "Sign")
 
         buttonConfiguration.baseBackgroundColor = .orange
         buttonConfiguration.baseForegroundColor = .white

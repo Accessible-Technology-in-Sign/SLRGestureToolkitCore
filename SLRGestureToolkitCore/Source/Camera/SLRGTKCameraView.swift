@@ -9,14 +9,26 @@ import UIKit
 import MediaPipeTasksVision
 
 public protocol SLRGTKCameraViewDelegate: AnyObject {
+    /// Called when SLRGTKCameraView has started to infer the sign. Sign inference is triggered by `SLRGTKCameraView.detect()`
     func cameraViewDidBeginInferring()
+    
+    /// Called when the engine has been setup. Engine setup is triggered by `SLRGTKCameraView.setupEngine()`
     func cameraViewDidSetupEngine()
+    
+    /// Delivers the inferred result
+    /// - Parameter signInferenceResult: Inferred result
     func cameraViewDidInferSign(_ signInferenceResult: SignInferenceResult)
+    
+    /// Called when any error occurs
+    /// - Parameter error: The error that occured
     func cameraViewDidThrowError(_ error: Error)
 }
 
+/// SLRGTKCameraView contains the Camera and the Engine for Sign Language Recognition
 public final class SLRGTKCameraView: UIView {
     
+    /// The object that acts as the delegate of the Camera View
+    /// The delegate must adopt the SLRGTKCameraViewDelegate protocol. The delegate object is responsible for listening to updates provided by the SLRGTKCameraView
     public weak var delegate: SLRGTKCameraViewDelegate?
     
     private lazy var buffer: any Buffer = settings.signInferenceSettings.getBuffer()
@@ -136,6 +148,7 @@ extension SLRGTKCameraView {
 // MARK: - Start
 extension SLRGTKCameraView {
     
+    /// Begins the gesture recognition process by activating the camera feed. The camera is always the front camera in wide angle if supported.
     public func start() {
         initializeHandLandmarkerServiceOnSessionResumption()
         cameraFeedService.startLiveCameraSession { [weak self] cameraConfiguration in
@@ -176,6 +189,8 @@ extension SLRGTKCameraView {
 
 // MARK: - Stop
 extension SLRGTKCameraView {
+    
+    /// Stops the camera feed and clears any data stored from the session
     func stop() {
         cameraFeedService.stopSession()
         clearhandLandmarkerServiceOnSessionInterruption()
@@ -190,6 +205,7 @@ extension SLRGTKCameraView {
 // MARK: - Detection
 extension SLRGTKCameraView {
     
+    /// Triggers the actual detection and inference of sign gestures based on captured camera input.
     public func detect() {
         
         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -233,7 +249,7 @@ extension SLRGTKCameraView {
 }
 
 extension SLRGTKCameraView: CameraFeedServiceDelegate {
-    public func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
+    func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
         let currentTimeMs = Date().timeIntervalSince1970 * 1000
         // Pass the pixel buffer to mediapipe
         
@@ -247,7 +263,7 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
     }
     
     // MARK: Session Handling Alerts
-    public func sessionWasInterrupted(canResumeManually resumeManually: Bool) {
+    func sessionWasInterrupted(canResumeManually resumeManually: Bool) {
         // Updates the UI when session is interupted.
         if resumeManually {
             resumeButton.isHidden = false
@@ -257,14 +273,14 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
         clearhandLandmarkerServiceOnSessionInterruption()
     }
     
-    public func sessionInterruptionEnded() {
+    func sessionInterruptionEnded() {
         // Updates UI once session interruption has ended.
         cameraUnavailableLabel.isHidden = true
         resumeButton.isHidden = true
         initializeHandLandmarkerServiceOnSessionResumption()
     }
     
-    public func didEncounterSessionRuntimeError() {
+    func didEncounterSessionRuntimeError() {
         // Handles session run time error by updating the UI and providing a button if session can be
         // manually resumed.
         resumeButton.isHidden = false
