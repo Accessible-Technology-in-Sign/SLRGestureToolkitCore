@@ -137,7 +137,7 @@ You will need a physical device to use the app since it uses a camera. Use the t
     - Triggers the inference process to recognize and provide a gesture label (i.e. a String representing what the sign was inferred to be)
     - The inferred word is matched against the Boggle board.
     
-*callbacks:*
+*delegate functions:*
     
 `cameraViewDidBeginInferring()`
 - **Purpose:** Triggered when inference begins, updating the UI accordingly to indicate processing.
