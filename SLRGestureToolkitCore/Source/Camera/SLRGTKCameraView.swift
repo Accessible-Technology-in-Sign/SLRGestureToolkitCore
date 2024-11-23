@@ -9,17 +9,29 @@ import UIKit
 import MediaPipeTasksVision
 
 public protocol SLRGTKCameraViewDelegate: AnyObject {
+    /// Called when SLRGTKCameraView has started to infer the sign. Sign inference is triggered by `SLRGTKCameraView.detect()`
     func cameraViewDidBeginInferring()
+    
+    /// Called when the engine has been setup. Engine setup is triggered by `SLRGTKCameraView.setupEngine()`
     func cameraViewDidSetupEngine()
+    
+    /// Delivers the inferred result
+    /// - Parameter signInferenceResult: Inferred result
     func cameraViewDidInferSign(_ signInferenceResult: SignInferenceResult)
+    
+    /// Called when any error occurs
+    /// - Parameter error: The error that occured
     func cameraViewDidThrowError(_ error: Error)
 }
 
+/// SLRGTKCameraView contains the Camera and the Engine for Sign Language Recognition
 public final class SLRGTKCameraView: UIView {
     
+    /// The object that acts as the delegate of the Camera View
+    /// The delegate must adopt the SLRGTKCameraViewDelegate protocol. The delegate object is responsible for listening to updates provided by the SLRGTKCameraView
     public weak var delegate: SLRGTKCameraViewDelegate?
     
-    private lazy var buffer: Buffer<HandLandmarkerResult> = Buffer(capacity: settings.signInferenceSettings.numberOfFramesPerInference)
+    private lazy var buffer: any Buffer = settings.signInferenceSettings.getBuffer()
     
     private let handLandmarkerServiceQueue = DispatchQueue(
         label: "com.wavinDev.cameraView.handLandmarkerServiceQueue",
@@ -80,7 +92,7 @@ public final class SLRGTKCameraView: UIView {
         cameraFeedService.updateVideoPreviewLayer(toFrame: bounds)
     }
     
-    func setupEngine() {
+    public func setupEngine() {
         setupSignInferenceService()
         configureBuffer()
         delegate?.cameraViewDidSetupEngine()
@@ -106,7 +118,7 @@ public final class SLRGTKCameraView: UIView {
     }
     
     private func configureBuffer() {
-        buffer = Buffer(capacity: settings.signInferenceSettings.numberOfFramesPerInference)
+        buffer = settings.signInferenceSettings.getBuffer()
     }
     
     private func setupSignInferenceService() {
@@ -136,6 +148,7 @@ extension SLRGTKCameraView {
 // MARK: - Start
 extension SLRGTKCameraView {
     
+    /// Begins the gesture recognition process by activating the camera feed. The camera is always the front camera in wide angle if supported.
     public func start() {
         initializeHandLandmarkerServiceOnSessionResumption()
         cameraFeedService.startLiveCameraSession { [weak self] cameraConfiguration in
@@ -176,6 +189,8 @@ extension SLRGTKCameraView {
 
 // MARK: - Stop
 extension SLRGTKCameraView {
+    
+    /// Stops the camera feed and clears any data stored from the session
     func stop() {
         cameraFeedService.stopSession()
         clearhandLandmarkerServiceOnSessionInterruption()
@@ -190,12 +205,11 @@ extension SLRGTKCameraView {
 // MARK: - Detection
 extension SLRGTKCameraView {
     
-    func detect() {
+    /// Triggers the actual detection and inference of sign gestures based on captured camera input.
+    public func detect() {
         
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let strongSelf = self else { return }
-            
-            var handLandmarks = strongSelf.buffer.items
             
             DispatchQueue.main.async { [weak self] in
                 guard let strongSelf = self else { return }
@@ -205,43 +219,17 @@ extension SLRGTKCameraView {
                 }
             }
             
-            var inferenceData: [Float] = []
-            
-            let numberOfPointsPerLandmark = strongSelf.settings.signInferenceSettings.numberOfPointsPerLandmark
-            let numberOfFramesPerInference = strongSelf.settings.signInferenceSettings.numberOfFramesPerInference
-            
-            guard !handLandmarks.isEmpty else {
-                strongSelf.delegate?.cameraViewDidThrowError(DependencyError.noLandmarks)
-                return
-            }
-            
-            if handLandmarks.count < numberOfFramesPerInference {
-                let midPoint = handLandmarks.count / 2
+            do {
+                let inferenceData = try strongSelf.buffer.getInferenceData()
                 
-                for _ in 0 ..< (numberOfFramesPerInference - handLandmarks.count) {
-                    handLandmarks.append(handLandmarks[midPoint])
+                if let inferenceResults = strongSelf.signInferenceService?.runModel(using: inferenceData) {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let strongSelf = self else { return }
+                        strongSelf.delegate?.cameraViewDidInferSign(inferenceResults)
+                    }
                 }
-                
-            }
-            
-            handLandmarks.forEach { landmark in
-                guard let normalizedLandmarks = landmark.landmarks.first,
-                      normalizedLandmarks.count == numberOfPointsPerLandmark else {
-                    strongSelf.delegate?.cameraViewDidThrowError(DependencyError.landmarkStructure)
-                    return // TODO: Keep this condition in sync with Android
-                }
-                
-                for i in 0 ..< numberOfPointsPerLandmark {
-                    inferenceData.append(normalizedLandmarks[i].x)
-                    inferenceData.append(normalizedLandmarks[i].y)
-                }
-            }
-            
-            if let inferenceResults = strongSelf.signInferenceService?.runModel(using: inferenceData) {
-                DispatchQueue.main.async { [weak self] in
-                    guard let strongSelf = self else { return }
-                    strongSelf.delegate?.cameraViewDidInferSign(inferenceResults)
-                }
+            } catch {
+                strongSelf.delegate?.cameraViewDidThrowError(error)
             }
         }
     }
@@ -261,7 +249,7 @@ extension SLRGTKCameraView {
 }
 
 extension SLRGTKCameraView: CameraFeedServiceDelegate {
-    public func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
+    func didOutput(sampleBuffer: CMSampleBuffer, orientation: UIImage.Orientation) {
         let currentTimeMs = Date().timeIntervalSince1970 * 1000
         // Pass the pixel buffer to mediapipe
         
@@ -275,7 +263,7 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
     }
     
     // MARK: Session Handling Alerts
-    public func sessionWasInterrupted(canResumeManually resumeManually: Bool) {
+    func sessionWasInterrupted(canResumeManually resumeManually: Bool) {
         // Updates the UI when session is interupted.
         if resumeManually {
             resumeButton.isHidden = false
@@ -285,14 +273,14 @@ extension SLRGTKCameraView: CameraFeedServiceDelegate {
         clearhandLandmarkerServiceOnSessionInterruption()
     }
     
-    public func sessionInterruptionEnded() {
+    func sessionInterruptionEnded() {
         // Updates UI once session interruption has ended.
         cameraUnavailableLabel.isHidden = true
         resumeButton.isHidden = true
         initializeHandLandmarkerServiceOnSessionResumption()
     }
     
-    public func didEncounterSessionRuntimeError() {
+    func didEncounterSessionRuntimeError() {
         // Handles session run time error by updating the UI and providing a button if session can be
         // manually resumed.
         resumeButton.isHidden = false

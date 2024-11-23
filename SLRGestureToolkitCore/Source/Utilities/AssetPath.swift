@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct AssetPath {
+public struct AssetPath {
     let name: String
     let fileExtension: String
-    let bundle: Bundle = .main
+    let bundle: Bundle
+    
+    public init(name: String, fileExtension: String, bundle: Bundle = .main) {
+        self.name = name
+        self.fileExtension = fileExtension
+        self.bundle = bundle
+    }
     
     var resourcePathString: String? {
         return bundle.path(forResource: name, ofType: fileExtension)

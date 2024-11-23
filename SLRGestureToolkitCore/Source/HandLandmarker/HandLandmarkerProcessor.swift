@@ -8,7 +8,7 @@
 import Foundation
 import MediaPipeTasksVision
 
-enum HandLandmarkerProcessor: CaseIterable {
+public enum HandLandmarkerProcessor: CaseIterable {
     case GPU
     case CPU
     

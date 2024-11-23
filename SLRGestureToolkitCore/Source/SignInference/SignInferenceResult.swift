@@ -10,13 +10,19 @@ import Foundation
 /**
  Stores one formatted inference.
  */
-struct SignInference {
-    let confidence: Float
-    let label: String
+public struct SignInference {
+    /// Confidence level of the inferred sign
+    public let confidence: Float
+    
+    /// Label or name of the inferred sign
+    public let label: String
 }
 
 public struct SignInferenceResult {
-    let inferenceTime: Double
-    let inferences: [SignInference]
+    
+    /// Time taken to infer the result
+    public let inferenceTime: Double
+    /// Inferred result(s)
+    public let inferences: [SignInference]
 }
 
