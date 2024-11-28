@@ -12,11 +12,19 @@ public struct SLRGTKSettings {
     
     let isContinuous: Bool
     
+    let bufferType: BufferType
+    
     let handlandmarkerSettings: HandLandmarkerSettings
     let signInferenceSettings: SignInferenceSettings
     
-    public init(handlandmarkerSettings: HandLandmarkerSettings, signInferenceSettings: SignInferenceSettings, isContinuous: Bool = false) {
+    public init(
+        handlandmarkerSettings: HandLandmarkerSettings,
+        signInferenceSettings: SignInferenceSettings,
+        bufferType: BufferType = .defaultType,
+        isContinuous: Bool = false
+    ) {
         self.handlandmarkerSettings = handlandmarkerSettings
+        self.bufferType = bufferType
         self.signInferenceSettings = signInferenceSettings
         self.isContinuous = isContinuous
     }
@@ -84,8 +92,6 @@ public struct SignInferenceSettings {
     let numberOfFramesPerInference: Int
     let numberOfPointsPerLandmark: Int
     
-    let bufferType: BufferType
-    
     let threadCount: Int
     let modelPath: AssetPath
     let labelsPath: AssetPath
@@ -93,13 +99,11 @@ public struct SignInferenceSettings {
     public init(numberOfFramesPerInference: Int = 60,
          numberOfPointsPerLandmark: Int = 21,
          threadCount: Int = 1,
-         bufferType: BufferType = .defaultType,
          modelPath: AssetPath = AssetPath(name: "model_2", fileExtension: "tflite"),
          labelsPath: AssetPath = AssetPath(name: "signsList", fileExtension: "txt")
     ) {
         self.numberOfFramesPerInference = numberOfFramesPerInference
         self.numberOfPointsPerLandmark = numberOfPointsPerLandmark
-        self.bufferType = bufferType
         self.threadCount = threadCount
         self.modelPath = modelPath
         self.labelsPath = labelsPath
